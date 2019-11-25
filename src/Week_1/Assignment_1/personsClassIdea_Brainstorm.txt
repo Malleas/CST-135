@@ -1,0 +1,22 @@
+Class - Person
+
+data fields:
+id String public
+fName String public
+lName String public
+phoneNumber String private
+address String private
+steps int private
+
+constructors and methods
+Person(String id, String fname, String lName, String phoneNumber, String address)
+getId()
+setId()
+getFName()
+setFName()
+getLName()
+setLName()
+setPhoneNumber()
+setAddress()
+walk() (steps * 2.5)
+run()  (steps * 6)
