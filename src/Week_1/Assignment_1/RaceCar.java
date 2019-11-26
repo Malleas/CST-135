@@ -1,4 +1,4 @@
-package Week_1.Assignment_1.Week_1;
+package Week_1.Assignment_1;
 
 import java.util.Random;
 
