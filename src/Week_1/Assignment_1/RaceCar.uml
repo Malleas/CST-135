@@ -3,11 +3,11 @@
   <ID>JAVA</ID>
   <OriginalElement>Week_1.Assignment_1.RaceCar</OriginalElement>
   <nodes>
-    <node x="-171.0" y="-190.0">Week_1.Assignment_1.RaceCar</node>
+    <node x="-677.0" y="-296.0">Week_1.Assignment_1.RaceCar</node>
   </nodes>
   <notes />
   <edges />
-  <settings layout="Hierarchic Group" zoom="1.0" x="49.0" y="14.5" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="-551.5" y="-17.0" />
   <SelectedNodes>
     <node>Week_1.Assignment_1.RaceCar</node>
   </SelectedNodes>

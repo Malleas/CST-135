@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Week_2.Assignments.Assignment_8.base.Shape</OriginalElement>
+  <nodes>
+    <node x="531.9999999999999" y="0.0">Week_2.Assignments.Assignment_8.base.Shape</node>
+    <node x="0.0" y="433.0">Week_2.Assignments.Assignment_8.shapes.Trapazoid</node>
+    <node x="744.0" y="444.5">Week_2.Assignments.Assignment_8.shapes.Rectangle</node>
+    <node x="486.4999999999999" y="101.0">Week_2.Assignments.Assignment_8.base.ShapeBase</node>
+    <node x="296.0" y="444.5">Week_2.Assignments.Assignment_8.shapes.Triangle</node>
+    <node x="532.0" y="433.0">Week_2.Assignments.Assignment_8.shapes.Circle</node>
+    <node x="621.1388888888888" y="567.0">Week_2.Assignments.Assignment_8.test.Test</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Week_2.Assignments.Assignment_8.shapes.Triangle" target="Week_2.Assignments.Assignment_8.base.ShapeBase">
+      <point x="54.0" y="-25.5" />
+      <point x="458.0" y="403.0" />
+      <point x="585.5499999999998" y="403.0" />
+      <point x="-42.450000000000045" y="126.0" />
+    </edge>
+    <edge source="Week_2.Assignments.Assignment_8.shapes.Circle" target="Week_2.Assignments.Assignment_8.base.ShapeBase">
+      <point x="48.0" y="-37.0" />
+      <point x="676.0" y="413.0" />
+      <point x="642.15" y="413.0" />
+      <point x="14.150000000000091" y="126.0" />
+    </edge>
+    <edge source="Week_2.Assignments.Assignment_8.shapes.Trapazoid" target="Week_2.Assignments.Assignment_8.base.ShapeBase">
+      <point x="69.0" y="-37.0" />
+      <point x="207.0" y="383.0" />
+      <point x="528.9499999999999" y="383.0" />
+      <point x="-99.05000000000001" y="126.0" />
+    </edge>
+    <edge source="Week_2.Assignments.Assignment_8.test.Test" target="Week_2.Assignments.Assignment_8.shapes.Trapazoid">
+      <point x="-102.91666666666663" y="-36.5" />
+      <point x="641.7222222222222" y="547.0" />
+      <point x="138.0" y="547.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="Week_2.Assignments.Assignment_8.base.ShapeBase" target="Week_2.Assignments.Assignment_8.base.Shape">
+      <point x="0.0" y="-126.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="Week_2.Assignments.Assignment_8.shapes.Rectangle" target="Week_2.Assignments.Assignment_8.base.ShapeBase">
+      <point x="56.75" y="-25.5" />
+      <point x="914.25" y="393.0" />
+      <point x="698.7499999999999" y="393.0" />
+      <point x="70.75" y="126.0" />
+    </edge>
+    <edge source="Week_2.Assignments.Assignment_8.test.Test" target="Week_2.Assignments.Assignment_8.shapes.Rectangle">
+      <point x="20.58333333333337" y="-36.5" />
+      <point x="765.2222222222222" y="527.0" />
+      <point x="857.5" y="527.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="Week_2.Assignments.Assignment_8.test.Test" target="Week_2.Assignments.Assignment_8.shapes.Triangle">
+      <point x="-61.75" y="-36.5" />
+      <point x="682.8888888888888" y="537.0" />
+      <point x="404.0" y="537.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="Week_2.Assignments.Assignment_8.test.Test" target="Week_2.Assignments.Assignment_8.shapes.Circle">
+      <point x="-20.58333333333337" y="-36.5" />
+      <point x="724.0555555555554" y="527.0" />
+      <point x="628.0" y="527.0" />
+      <point x="0.0" y="37.0" />
+    </edge>
+    <edge source="Week_2.Assignments.Assignment_8.test.Test" target="Week_2.Assignments.Assignment_8.base.ShapeBase">
+      <point x="102.91666666666663" y="-36.5" />
+      <point x="847.5555555555554" y="547.0" />
+      <point x="992.5" y="547.0" />
+      <point x="992.5" y="373.0" />
+      <point x="755.35" y="373.0" />
+      <point x="127.35000000000014" y="126.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="451.4999999999999" y="362.0" />
+  <SelectedNodes>
+    <node>Week_2.Assignments.Assignment_8.base.Shape</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
