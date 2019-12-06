@@ -1,20 +1,13 @@
-package Week_1.Milestone_1;
+package Milestone;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 /**
  * All work is created by Matt Sievers on 11-26-2019 for use in CST-105
  */
 public class DatabaseAccessService implements DataAccessService {
-  @Override
-  public void readAllContacts(List<String> contactList) {
 
-  }
-
-  @Override
-  public void saveAllContacts(List<String> contactList) {
-
-  }
 
   public String userName;
   public String password;
@@ -42,5 +35,16 @@ public class DatabaseAccessService implements DataAccessService {
 
   public void createConnection(String userName, String password, String location, String port){
     //Create DB connection
+  }
+
+
+  @Override
+  public List<BaseContact> readAllContacts(String fileName) {
+    return null;
+  }
+
+  @Override
+  public void saveAllContacts(List<BaseContact> contacts) {
+
   }
 }

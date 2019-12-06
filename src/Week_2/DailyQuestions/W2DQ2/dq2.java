@@ -15,16 +15,16 @@ public class dq2 {
   public static void main(String[] args) {
     Car car = new Car();
     Jet jet = new Jet();
+    Vehicle v = new Vehicle();
+    v.move(32);
     car.move(50);
-    car.move(50.0);
-    jet.move("15");
-    jet.move(15.2);
+    jet.move(15);
 
   }
 }
 
 class Vehicle {
-  public void move(double distance) {
+  public void move(int distance) {
     System.out.println("This is the parent Vehicle class where distance is mulitplied by 2 and == " + distance * 2);
   }
 }
@@ -36,7 +36,7 @@ class Car extends Vehicle {
 }
 
 class Jet extends Vehicle {
-  public void move(String distance) {
-    System.out.println("This is the Jet child class and distance is: " + distance);
+  public void move(int distance) {
+    System.out.println("This is the Jet child class and distance is: " + distance / 2);
   }
 }
