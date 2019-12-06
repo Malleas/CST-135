@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Milestone.AddressBook</OriginalElement>
+  <nodes>
+    <node x="819.7129393424034" y="0.0">Milestone.Location</node>
+    <node x="1141.7921910430837" y="912.0">Milestone.DatabaseAccessService</node>
+    <node x="529.7129393424034" y="0.0">Milestone.Photo</node>
+    <node x="930.2398951247164" y="639.0">Milestone.DataAccessService</node>
+    <node x="655.1171910430837" y="285.0">Milestone.BaseContact</node>
+    <node x="48.348044217686834" y="594.0">Milestone.PersonContact</node>
+    <node x="1285.2398951247164" y="594.0">Milestone.BusinessContact</node>
+    <node x="538.75" y="1278.0">Milestone.ConsoleApp</node>
+    <node x="733.75" y="978.5">Milestone.FileAccessService</node>
+    <node x="343.4624149659862" y="857.0">Milestone.AddressBook</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Milestone.PersonContact" target="Milestone.BaseContact">
+      <point x="76.75" y="-81.5" />
+      <point x="432.09804421768683" y="544.0" />
+      <point x="673.7671910430837" y="544.0" />
+      <point x="-167.85000000000002" y="114.5" />
+    </edge>
+    <edge source="Milestone.PersonContact" target="Milestone.Photo">
+      <point x="-230.25" y="-81.5" />
+      <point x="125.09804421768683" y="574.0" />
+      <point x="154.04574829931948" y="574.0" />
+      <point x="154.04574829931948" y="255.0" />
+      <point x="626.1415107709747" y="255.0" />
+      <point x="-38.571428571428555" y="92.5" />
+    </edge>
+    <edge source="Milestone.BusinessContact" target="Milestone.BaseContact">
+      <point x="-184.5" y="-81.5" />
+      <point x="1346.7398951247164" y="544.0" />
+      <point x="972.1671910430838" y="544.0" />
+      <point x="130.55000000000007" y="114.5" />
+    </edge>
+    <edge source="Milestone.BusinessContact" target="Milestone.Location">
+      <point x="184.5" y="-81.5" />
+      <point x="1715.7398951247164" y="574.0" />
+      <point x="1664.5421910430837" y="574.0" />
+      <point x="1664.5421910430837" y="225.0" />
+      <point x="1003.5700821995463" y="225.0" />
+      <point x="40.85714285714289" y="92.5" />
+    </edge>
+    <edge source="Milestone.BaseContact" target="Milestone.Location">
+      <point x="155.41666666666663" y="-114.5" />
+      <point x="997.0338577097504" y="265.0" />
+      <point x="962.7129393424034" y="265.0" />
+      <point x="0.0" y="92.5" />
+    </edge>
+    <edge source="Milestone.FileAccessService" target="Milestone.Location">
+      <point x="111.33333333333326" y="-59.0" />
+      <point x="1012.0833333333333" y="827.0" />
+      <point x="1837.1684665532878" y="827.0" />
+      <point x="1837.1684665532878" y="215.0" />
+      <point x="1044.4272250566892" y="215.0" />
+      <point x="81.71428571428578" y="92.5" />
+    </edge>
+    <edge source="Milestone.DatabaseAccessService" target="Milestone.BaseContact">
+      <point x="99.75" y="-125.5" />
+      <point x="1441.0421910430837" y="817.0" />
+      <point x="1274.7398951247164" y="817.0" />
+      <point x="1274.7398951247164" y="554.0" />
+      <point x="934.8671910430838" y="554.0" />
+      <point x="93.25000000000011" y="114.5" />
+    </edge>
+    <edge source="Milestone.ConsoleApp" target="Milestone.FileAccessService">
+      <point x="73.60000000000002" y="-25.5" />
+      <point x="704.3499999999999" y="1258.0" />
+      <point x="984.25" y="1258.0" />
+      <point x="83.5" y="59.0" />
+    </edge>
+    <edge source="Milestone.FileAccessService" target="Milestone.PersonContact">
+      <point x="-37.111111111111086" y="-59.0" />
+      <point x="863.6388888888889" y="787.0" />
+      <point x="585.5980442176868" y="787.0" />
+      <point x="230.25" y="81.5" />
+    </edge>
+    <edge source="Milestone.PersonContact" target="Milestone.Location">
+      <point x="-76.75" y="-81.5" />
+      <point x="278.59804421768683" y="265.0" />
+      <point x="840.1415107709747" y="265.0" />
+      <point x="-122.57142857142856" y="92.5" />
+    </edge>
+    <edge source="Milestone.AddressBook" target="Milestone.PersonContact">
+      <point x="-110.66666666666669" y="-180.5" />
+      <point x="398.79574829931954" y="837.0" />
+      <point x="278.59804421768683" y="837.0" />
+      <point x="-76.75" y="81.5" />
+    </edge>
+    <edge source="Milestone.BaseContact" target="Milestone.Photo">
+      <point x="-155.41666666666663" y="-114.5" />
+      <point x="686.2005243764171" y="255.0" />
+      <point x="664.7129393424034" y="255.0" />
+      <point x="0.0" y="92.5" />
+    </edge>
+    <edge source="Milestone.ConsoleApp" target="Milestone.AddressBook">
+      <point x="0.0" y="-25.5" />
+      <point x="630.75" y="1238.0" />
+      <point x="592.4624149659862" y="1238.0" />
+      <point x="83.0" y="180.5" />
+    </edge>
+    <edge source="Milestone.FileAccessService" target="Milestone.DataAccessService">
+      <point x="74.22222222222217" y="-59.0" />
+      <point x="974.9722222222222" y="817.0" />
+      <point x="1013.7398951247164" y="817.0" />
+      <point x="-83.5" y="36.5" />
+    </edge>
+    <edge source="Milestone.FileAccessService" target="Milestone.BaseContact">
+      <point x="37.111111111111086" y="-59.0" />
+      <point x="937.8611111111111" y="837.0" />
+      <point x="919.7398951247164" y="837.0" />
+      <point x="919.7398951247164" y="574.0" />
+      <point x="860.2671910430837" y="574.0" />
+      <point x="18.649999999999977" y="114.5" />
+    </edge>
+    <edge source="Milestone.BusinessContact" target="Milestone.Photo">
+      <point x="61.5" y="-81.5" />
+      <point x="1592.7398951247164" y="235.0" />
+      <point x="780.4272250566892" y="235.0" />
+      <point x="115.71428571428578" y="92.5" />
+    </edge>
+    <edge source="Milestone.FileAccessService" target="Milestone.Photo">
+      <point x="-111.33333333333337" y="-59.0" />
+      <point x="789.4166666666665" y="807.0" />
+      <point x="18.15161564625828" y="807.0" />
+      <point x="18.15161564625828" y="245.0" />
+      <point x="587.5700821995463" y="245.0" />
+      <point x="-77.14285714285711" y="92.5" />
+    </edge>
+    <edge source="Milestone.AddressBook" target="Milestone.BaseContact">
+      <point x="110.66666666666669" y="-180.5" />
+      <point x="620.129081632653" y="837.0" />
+      <point x="735.7957482993195" y="837.0" />
+      <point x="735.7957482993195" y="574.0" />
+      <point x="785.6671910430838" y="574.0" />
+      <point x="-55.94999999999993" y="114.5" />
+    </edge>
+    <edge source="Milestone.DatabaseAccessService" target="Milestone.DataAccessService">
+      <point x="-99.75" y="-125.5" />
+      <point x="1241.5421910430837" y="817.0" />
+      <point x="1180.7398951247164" y="817.0" />
+      <point x="83.5" y="36.5" />
+    </edge>
+    <edge source="Milestone.ConsoleApp" target="Milestone.PersonContact">
+      <point x="-73.60000000000002" y="-25.5" />
+      <point x="557.1499999999999" y="1258.0" />
+      <point x="0.0" y="1258.0" />
+      <point x="0.0" y="837.0" />
+      <point x="125.09804421768683" y="837.0" />
+      <point x="-230.25" y="81.5" />
+    </edge>
+    <edge source="Milestone.DataAccessService" target="Milestone.BaseContact">
+      <point x="0.0" y="-36.5" />
+      <point x="1097.2398951247164" y="564.0" />
+      <point x="897.5671910430838" y="564.0" />
+      <point x="55.950000000000045" y="114.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.30000000000000016" x="901.9999999999993" y="584.5" />
+  <SelectedNodes>
+    <node>Milestone.AddressBook</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
