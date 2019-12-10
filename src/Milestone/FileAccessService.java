@@ -1,12 +1,6 @@
 package Milestone;
 
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.charset.Charset;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +28,7 @@ public class FileAccessService implements DataAccessService {
     Location loc2 = new Location("222 Farm St.", "Queen Creek", "AZ", 85297);
     Photo photo1 = new Photo(1, "Milestone/photos/Male_Headshot1.jpeg", "04/05/2019", "Headshot");
     PersonContact person1 = new PersonContact();
-    person1.setNumber(1);
+    person1.setContactId(1);
     person1.setName("Bob");
     person1.setDateOfBirth("01/01/1980");
     person1.setDescription("Friend");
@@ -50,7 +44,7 @@ public class FileAccessService implements DataAccessService {
 
     PersonContact person2 = new PersonContact();
     person2.setName("Jim");
-    person2.setNumber(2);
+    person2.setContactId(2);
     person2.setDateOfBirth("02/04/1983");
     person2.setDescription("Brother to Bob");
     person2.setPhoneNumber("6237877777");
@@ -64,7 +58,7 @@ public class FileAccessService implements DataAccessService {
 
     PersonContact person3 = new PersonContact();
     person3.setName("Janet");
-    person3.setNumber(3);
+    person3.setContactId(3);
     person3.setDateOfBirth("12/25/1972");
     person3.setDescription("Sister to Bob");
     person3.setPhoneNumber("602-111-1111");

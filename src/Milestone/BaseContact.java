@@ -36,7 +36,7 @@ public abstract class BaseContact {
   public BaseContact() {
   }
 
-  public void setNumber(int contactId) {
+  public void setContactId(int contactId) {
     this.contactId = contactId;
   }
 

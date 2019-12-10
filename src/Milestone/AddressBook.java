@@ -46,6 +46,7 @@ public class AddressBook {
 
   }
 
+
   public void addContact(PersonContact contact) {
     contacts.add(contact);
     System.out.println("Contact " + contact.getName() + " added to Address book successfully");
@@ -74,12 +75,11 @@ public class AddressBook {
         return;
       }
     }
-    System.out.println("blah");
   }
 
-  public void searchContacts(String nane, String city, String description) {
+  public void searchContacts(String name, String city, String description) {
     for (BaseContact contact : getContacts()) {
-      boolean isNameEquals = nane == null || contact.getName().equalsIgnoreCase(nane);
+      boolean isNameEquals = name == null || contact.getName().equalsIgnoreCase(name);
       boolean isCityEquals = city == null || (contact.getLocation().getCity() != null && contact.getLocation().getCity().equalsIgnoreCase(city));
       boolean isDescription = description == null;
       if (contact instanceof PersonContact) {
