@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Week2.Assignments.Assignment_5.Bomb</OriginalElement>
+  <nodes>
+    <node x="138.77666666666667" y="424.0">Week2.Assignments.Assignment_5.Game</node>
+    <node x="0.0" y="167.0">Week2.Assignments.Assignment_5.Gun</node>
+    <node x="225.0" y="167.0">Week2.Assignments.Assignment_5.Bomb</node>
+    <node x="224.40166666666667" y="0.0">Week2.Assignments.Assignment_5.WeaponInterface</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Week2.Assignments.Assignment_5.Game" target="Week2.Assignments.Assignment_5.WeaponInterface">
+      <point x="113.60000000000002" y="-36.5" />
+      <point x="394.37666666666667" y="404.0" />
+      <point x="440.5" y="404.0" />
+      <point x="440.5" y="142.0" />
+      <point x="395.235" y="142.0" />
+      <point x="68.33333333333331" y="58.5" />
+    </edge>
+    <edge source="Week2.Assignments.Assignment_5.Bomb" target="Week2.Assignments.Assignment_5.WeaponInterface">
+      <point x="0.0" y="-103.5" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="Week2.Assignments.Assignment_5.Gun" target="Week2.Assignments.Assignment_5.WeaponInterface">
+      <point x="0.0" y="-103.5" />
+      <point x="102.5" y="142.0" />
+      <point x="258.5683333333334" y="142.0" />
+      <point x="-68.33333333333331" y="58.5" />
+    </edge>
+    <edge source="Week2.Assignments.Assignment_5.Game" target="Week2.Assignments.Assignment_5.Gun">
+      <point x="-56.80000000000001" y="-36.5" />
+      <point x="223.97666666666666" y="394.0" />
+      <point x="153.75" y="394.0" />
+      <point x="51.25" y="103.5" />
+    </edge>
+    <edge source="Week2.Assignments.Assignment_5.Game" target="Week2.Assignments.Assignment_5.Bomb">
+      <point x="56.80000000000001" y="-36.5" />
+      <point x="337.5766666666667" y="404.0" />
+      <point x="378.75" y="404.0" />
+      <point x="51.25" y="103.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="89.0" y="232.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

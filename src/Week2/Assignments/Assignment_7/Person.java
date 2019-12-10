@@ -3,7 +3,7 @@ package Week2.Assignments.Assignment_7;
 /**
  * All work is created by Matt Sievers on 12-03-2019 for use in CST-105
  */
-public class Person implements PersonInterface, Comparable<Person> {
+public class Person implements Week2.Assignments.Assignment_7.PersonInterface, Comparable<Person> {
 
   private String firstName;
   private String lastName;

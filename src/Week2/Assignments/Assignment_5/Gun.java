@@ -1,9 +1,12 @@
 package Week2.Assignments.Assignment_5;
 
-public class Gun extends Weapon {
+public class Gun implements WeaponInterface {
 
-    public void fireWeapon(int power){
-        System.out.println("In Gun.fireWeapon() with a power of " + power);
+    private int power;
+
+
+    public void setPower(int power) {
+        this.power = power;
     }
 
     @Override
@@ -11,8 +14,26 @@ public class Gun extends Weapon {
         System.out.println("In the Gun.activate() with an enable of " + enable);
     }
 
-    public void fireWeapon(){
-        System.out.println("In overload Bomb.fireWeapon()");
-        super.fireWeapon(42);
+    @Override
+    public int getPower() {
+        return this.power;
+    }
+
+
+    @Override
+    public void fireWeapon() {
+        System.out.println("In Gun.fireWeapon() with a power of " + this.power);
+    }
+
+    @Override
+    public void fireweapon(int power) {
+        System.out.println("In Gun.fireWeapon() with a power of " + this.power);
+    }
+
+    public Gun() {
+    }
+
+    public Gun(int power) {
+        this.power = power;
     }
 }
