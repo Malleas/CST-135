@@ -17,6 +17,104 @@ import java.util.Scanner;
  */
 public class ConsoleApp {
 
+  public static void main(String[] args) {
+    FileAccessService fileAccessService = new FileAccessService();
+    AddressBook book = new AddressBook();
+
+    int userInput = menu();
+
+    while (true) {
+
+      switch (userInput) {
+
+        case 1:
+          Scanner typeInput = new Scanner(System.in);
+          System.out.println("Please choose from the following:");
+          System.out.println("---------------------------------");
+          System.out.println("1 - Personal Contact");
+          System.out.println("2 - Business Contact");
+          System.out.println("3 - Back");
+
+          int contactType = typeInput.nextInt();
+          typeInput.nextLine();
+          switch (contactType) {
+            case 1:
+              createPersonContact(book);
+              break;
+            case 2:
+              createBusinessContact(book);
+              break;
+            case 3:
+              userInput = menu();
+              break;
+            default:
+              System.out.println("Default for case 1");
+
+          }
+          break;
+        case 2:
+          book.showContacts();
+          userInput = menu();
+          break;
+        case 3:
+          Scanner input = new Scanner(System.in);
+          System.out.println("Provide ID to display");
+          int id = input.nextInt();
+          input.nextLine();
+          book.displayContactById(id);
+          System.out.println("Would you like to edit this contact?");
+          System.out.println("------------------------------------");
+          System.out.println("1 - Yes");
+          System.out.println("2 - No");
+          int updateAnswer = input.nextInt();
+          switch (updateAnswer) {
+            case 1:
+              updateContact(book, id);
+              break;
+            case 2:
+              userInput = menu();
+              break;
+            default:
+              System.out.println("Default for case 3");
+          }
+          break;
+        case 4:
+          Scanner editInput = new Scanner(System.in);
+          System.out.println("Please provide an contact ID to update");
+          int idToEdit = editInput.nextInt();
+          updateContact(book, idToEdit);
+          userInput = menu();
+          break;
+        case 5:
+          Scanner searchNameInput = new Scanner(System.in);
+          System.out.println("Please provide a name to search for:");
+          String searchName = searchNameInput.nextLine();
+          book.searchContacts(searchName, null, null);
+          userInput = menu();
+          break;
+        case 6:
+          Scanner searchCityInput = new Scanner(System.in);
+          System.out.println("Please provide a city to search for:");
+          String searchCity = searchCityInput.nextLine();
+          book.searchContacts(null, searchCity, null);
+          userInput = menu();
+          break;
+        case 7:
+          Scanner searchDescriptionInput = new Scanner(System.in);
+          System.out.println("Please provide a description to search for:");
+          String searchDescription = searchDescriptionInput.nextLine();
+          book.searchContacts(null, null, searchDescription);
+          userInput = menu();
+          break;
+        case 8:
+          System.exit(0);
+          break;
+        default:
+          System.out.println("main() default");
+      }
+    }
+  }
+
   public static int menu() {
     int selection;
     Scanner input = new Scanner(System.in);
@@ -28,8 +126,8 @@ public class ConsoleApp {
     System.out.println("3 - Show contact by ID");
     System.out.println("4 - Edit contact by ID");
     System.out.println("5 - Search contact by name");
-    System.out.println("6 - Search contact by street");
-    System.out.println("7 - Search contact by URL");
+    System.out.println("6 - Search contact by city");
+    System.out.println("7 - Search contact by description");
     System.out.println("8 - Exit");
 
     selection = input.nextInt();
@@ -39,7 +137,7 @@ public class ConsoleApp {
   }
 
 
-  public static void createPersonContact() {
+  public static void createPersonContact(AddressBook book) {
     Scanner input = new Scanner(System.in);
     System.out.println("Enter contact ID:");
     int contactId = input.nextInt();
@@ -80,9 +178,10 @@ public class ConsoleApp {
     personContact.setLocation(location);
     personContact.setDateOfBirth(contactDOB);
     personContact.setDescription(contactDescription);
+    book.addContact(personContact);
   }
 
-  public static void createBusinessContact() {
+  public static void createBusinessContact(AddressBook book) {
     Scanner input = new Scanner(System.in);
     System.out.println("Enter contact ID:");
     int contactId = input.nextInt();
@@ -128,6 +227,7 @@ public class ConsoleApp {
     businessContact.setOpeningHour(contactOpenTime);
     businessContact.setClosingHour(contactCloseTime);
     businessContact.setWebsiteURL(contactURL);
+    book.addContact(businessContact);
   }
 
   public static void updatePhoto(AddressBook book, int contactId) {
@@ -269,98 +369,10 @@ public class ConsoleApp {
         ((BusinessContact) book.getContacts().get(contactId - 1)).setWebsiteURL(updatedUrl);
         break;
       default:
-        System.out.println("Invalid entry, please retry.");
+        System.out.println("update contact default");
     }
   }
 
-  public static void main(String[] args) {
-    FileAccessService fileAccessService = new FileAccessService();
-    AddressBook book = new AddressBook();
-
-    int userInput = menu();
-
-    while (true) {
-      switch (userInput) {
-
-        case 1:
-          Scanner typeInput = new Scanner(System.in);
-          System.out.println("Please choose from the following:");
-          System.out.println("---------------------------------");
-          System.out.println("1 - Personal Contact");
-          System.out.println("2 - Business Contact");
-          System.out.println("3 - Back");
-
-          int contactType = typeInput.nextInt();
-          typeInput.nextLine();
-          switch (contactType) {
-            case 1:
-              createPersonContact();
-              break;
-            case 2:
-              createBusinessContact();
-              break;
-            case 3:
-              break;
-            default:
-              System.out.println("Invalid choice, please try again.");
-
-          }
-          break;
-        case 2:
-          book.showContacts();
-          break;
-        case 3:
-          Scanner input = new Scanner(System.in);
-          System.out.println("Provide ID to display");
-          int id = input.nextInt();
-          input.nextLine();
-          book.displayContactById(id);
-          System.out.println("Would you like to edit this contact?");
-          System.out.println("------------------------------------");
-          System.out.println("1 - Yes");
-          System.out.println("2 - No");
-          int updateAnswer = input.nextInt();
-          switch (updateAnswer) {
-            case 1:
-              updateContact(book, id);
-              break;
-            case 2:
-              break;
-            default:
-              System.out.println("Invalid entry, please try again.");
-          }
-          break;
-        case 4:
-          Scanner editInput = new Scanner(System.in);
-          System.out.println("Please provide an contact ID to update");
-          int idToEdit = editInput.nextInt();
-          updateContact(book, idToEdit);
-          break;
-        case 5:
-          Scanner searchNameInput = new Scanner(System.in);
-          System.out.println("Please provide a name to search for:");
-          String searchName = searchNameInput.nextLine();
-          book.searchContacts(searchName, null, null);
-          break;
-        case 6:
-          Scanner searchCityInput = new Scanner(System.in);
-          System.out.println("Please provide a city to search for:");
-          String searchCity = searchCityInput.nextLine();
-          book.searchContacts(null, searchCity, null);
-          break;
-        case 7:
-          Scanner searchDescriptionInput = new Scanner(System.in);
-          System.out.println("Please provide a URL to search for:");
-          String searchDescription = searchDescriptionInput.nextLine();
-          book.searchContacts(null, null, searchDescription);
-          break;
-        case 8:
-          System.exit(0);
-          break;
-        default:
-          System.out.println("Invalid entry, please try again.");
-      }
-    }
 
 
 //  /**
@@ -400,5 +412,5 @@ public class ConsoleApp {
 //  System.out.println("Search for a person by description " +((PersonContact) book.getContacts().get(0)).getDescription());
 //  book.searchByDescription("Friend");
 
-  }
+
 }

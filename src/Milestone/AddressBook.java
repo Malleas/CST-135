@@ -47,7 +47,7 @@ public class AddressBook {
   }
 
 
-  public void addContact(PersonContact contact) {
+  public void addContact(BaseContact contact) {
     contacts.add(contact);
     System.out.println("Contact " + contact.getName() + " added to Address book successfully");
   }
