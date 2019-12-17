@@ -1,0 +1,17 @@
+Line 1
+Line 2
+Line 3
+Line 1
+Line 2
+Line 3
+From method Line 4
+2015,Ford,Focus,60000,3.2
+1982,Chevrolet,Silverado,160283,6.8
+1994,Pontiac,GrandAm,250324,1.5
+2019,Nissan,Rouge,11002,4.5
+2020,Toyota,Tacoma,50,7.2
+2015,Ford,Focus,60000,3.2
+1982,Chevrolet,Silverado,160283,6.8
+1994,Pontiac,GrandAm,250324,1.5
+2019,Nissan,Rouge,11002,4.5
+2020,Toyota,Tacoma,50,7.2
