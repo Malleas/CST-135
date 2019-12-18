@@ -38,22 +38,24 @@ public class PersonContact extends BaseContact {
 
   public PersonContact(){}
 
-  public PersonContact(int contactId, String name, String phoneNumber, Photo photo, Location location, String dateOfBirth, String description, List<PersonContact> contacts) {
-    super(contactId, name, phoneNumber, photo, location);
+  public PersonContact(String type, int contactId, String name, String phoneNumber, Photo photo, Location location,
+                       String dateOfBirth, String description) {
+    super(type, contactId, name, phoneNumber, photo, location);
     this.dateOfBirth = dateOfBirth;
     this.description = description;
-    setContacts(contacts);
+    //this.contacts = contacts;
   }
 
   @Override
   public String toString() {
     return "PersonContact{" +
-            "id=" + getContactId() +
+            "type=" + getType() +
+            ". id=" + getContactId() +
             ", name='" + getName() + '\'' +
             ", phoneNumber='" + getPhoneNumber() + '\'' +
             ", photo=" + getPhoto() +
             ", location=" + getLocation() +
-            "dateOfBirth='" + dateOfBirth + '\'' +
+            ", dateOfBirth='" + dateOfBirth + '\'' +
             ", description='" + description + '\'' +
             ", contacts=" + contacts +
             '}';

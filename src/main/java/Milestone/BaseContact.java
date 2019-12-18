@@ -12,6 +12,15 @@ public abstract class BaseContact {
   private String phoneNumber;
   private Photo photo = new Photo();
   private Location location = new Location();
+  private String type;
+
+  public String getType() {
+    return type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
 
   public int getContactId() {
     return contactId;
@@ -56,7 +65,8 @@ public abstract class BaseContact {
     this.location = location;
   }
 
-  public BaseContact(int contactId, String name, String phoneNumber, Photo photo, Location location) {
+  public BaseContact(String type, int contactId, String name, String phoneNumber, Photo photo, Location location) {
+    this.type = type;
     this.contactId = contactId;
     this.name = name;
     this.phoneNumber = phoneNumber;
@@ -67,7 +77,8 @@ public abstract class BaseContact {
   @Override
   public String toString() {
     return "BaseContact{" +
-            "id=" + contactId +
+            "type=" + type +
+            ", id=" + contactId +
             ", name='" + name + '\'' +
             ", phoneNumber='" + phoneNumber + '\'' +
             ", photo=" + photo +

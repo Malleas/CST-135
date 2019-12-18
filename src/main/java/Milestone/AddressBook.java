@@ -20,6 +20,9 @@ public class AddressBook {
     return contacts;
   }
 
+  public void setContacts(List<BaseContact> contacts) {
+    this.contacts = contacts;
+  }
 
   public AddressBook() {
   }

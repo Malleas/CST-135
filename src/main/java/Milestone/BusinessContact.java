@@ -9,8 +9,8 @@ private int openingHour;
 private int closingHour;
 private String websiteURL;
 
-  public BusinessContact(int contactId, String name, String phoneNumber, Photo photo, Location location, int openingHour, int closingHour, String websiteURL) {
-    super(contactId, name, phoneNumber, photo, location);
+  public BusinessContact(String type, int contactId, String name, String phoneNumber, Photo photo, Location location, int openingHour, int closingHour, String websiteURL) {
+    super(type, contactId, name, phoneNumber, photo, location);
     this.openingHour = openingHour;
     this.closingHour = closingHour;
     this.websiteURL = websiteURL;
@@ -45,12 +45,13 @@ private String websiteURL;
   @Override
   public String toString() {
     return "BusinessContact{" +
-            "id=" + getContactId() +
+            "type=" + getType() +
+            ", id=" + getContactId() +
             ", name='" + getName() + '\'' +
             ", phoneNumber='" + getPhoneNumber() + '\'' +
             ", photo=" + getPhoto() +
             ", location=" + getLocation() +
-            "openingHour=" + openingHour +
+            ", openingHour=" + openingHour +
             ", closingHour=" + closingHour +
             ", websiteURL='" + websiteURL + '\'' +
             '}';

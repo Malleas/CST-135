@@ -1,6 +1,7 @@
 package Milestone;
 
 
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -17,9 +18,11 @@ import java.util.Scanner;
  */
 public class ConsoleApp {
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
     FileAccessService fileAccessService = new FileAccessService();
+
     AddressBook book = new AddressBook();
+    book.setContacts(fileAccessService.readAllContacts("/Users/ntqams30/Dropbox/GCU Work/CST-135/src/main/java/Milestone/inputList.txt"));
 
     int userInput = menu();
 
@@ -107,6 +110,7 @@ public class ConsoleApp {
           userInput = menu();
           break;
         case 8:
+          fileAccessService.saveAllContacts("/Users/ntqams30/Dropbox/GCU Work/CST-135/src/main/java/Milestone/inputList.txt", book.getContacts(), true);
           System.exit(0);
           break;
         default:
@@ -171,6 +175,7 @@ public class ConsoleApp {
     PersonContact personContact = new PersonContact();
     Photo photo = new Photo(contactPhotoId, contactPhotoFileName, contactPhotoDate, contactPhotoDescription);
     Location location = new Location(contactStreetAddress, contactCity, contactState, contactZipCode);
+    personContact.setType("Personal");
     personContact.setContactId(contactId);
     personContact.setName(contactName);
     personContact.setPhoneNumber(contactPhoneNumber);
@@ -219,6 +224,7 @@ public class ConsoleApp {
     BusinessContact businessContact = new BusinessContact();
     Photo photo = new Photo(contactPhotoId, contactPhotoFileName, contactPhotoDate, contactPhotoDescription);
     Location location = new Location(contactStreetAddress, contactCity, contactState, contactZipCode);
+    businessContact.setType("Business");
     businessContact.setContactId(contactId);
     businessContact.setName(contactName);
     businessContact.setPhoneNumber(contactPhoneNumber);
@@ -358,13 +364,13 @@ public class ConsoleApp {
         break;
       case 8:
         Scanner closingTimeInput = new Scanner(System.in);
-        System.out.println("Please provide updated opening time:");
+        System.out.println("Please provide updated closing time:");
         int updatedClosingTime = closingTimeInput.nextInt();
         ((BusinessContact) book.getContacts().get(contactId - 1)).setClosingHour(updatedClosingTime);
         break;
       case 9:
         Scanner urlInput = new Scanner(System.in);
-        System.out.println("Please provide updated opening time:");
+        System.out.println("Please provide updated website URL:");
         String updatedUrl = urlInput.nextLine();
         ((BusinessContact) book.getContacts().get(contactId - 1)).setWebsiteURL(updatedUrl);
         break;

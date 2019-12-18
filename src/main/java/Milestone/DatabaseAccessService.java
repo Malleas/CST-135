@@ -44,7 +44,7 @@ public class DatabaseAccessService implements DataAccessService {
   }
 
   @Override
-  public void saveAllContacts(List<BaseContact> contacts) {
+  public void saveAllContacts(String fileName, List<BaseContact> contacts, boolean append) {
 
   }
 }
